@@ -10,7 +10,8 @@ class job extends Model
 {
     use HasFactory;
     protected $table = 'job_listings';
-    protected $fillable = ['type','salary'];//for avoiding mass assignment for security reasons so that non authenticated user can't update anything
+    // protected $fillable = ['employer_id','type','salary'];//for avoiding mass assignment for security reasons so that non authenticated user can't update anything
+    protected $guarded = [];
 
     public function employer()
     {
